@@ -4,6 +4,8 @@ const app = express();
 const mongoose = require("mongoose");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const userRoute = require("./routes").user;
+const authRoute = require("./routes").auth;
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -18,6 +20,9 @@ app.use(express.json()); //解析JSON格式的請求，並把其附加到req.bod
 app.use(express.urlencoded({ extended: true })); //解析post當中的參數(x-www-form-urlencoded)，附加到req.body
 app.use(helmet()); // 保護req用的
 app.use(morgan("common")); //後續可針對使用者搜尋做log
+
+app.use("/api/user", userRoute);
+app.use("/api/auth", authRoute);
 
 app.get("/check", (req, res) => {
   return res.send("OK");
