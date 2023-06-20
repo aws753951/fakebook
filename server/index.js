@@ -6,6 +6,8 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const userRoute = require("./routes").user;
 const authRoute = require("./routes").auth;
+const passport = require("passport");
+require("./config/passport")(passport);
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -21,7 +23,11 @@ app.use(express.urlencoded({ extended: true })); //解析post當中的參數(x-w
 app.use(helmet()); // 保護req用的
 app.use(morgan("common")); //後續可針對使用者搜尋做log
 
-app.use("/api/user", userRoute);
+app.use(
+  "/api/user",
+  passport.authenticate("jwt", { session: false }),
+  userRoute
+);
 app.use("/api/auth", authRoute);
 
 app.get("/check", (req, res) => {
