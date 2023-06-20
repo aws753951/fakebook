@@ -8,7 +8,6 @@ const userschema = new mongoose.Schema(
       required: true,
       minLength: 3,
       maxLength: 20,
-      unique: true,
     },
     email: {
       type: String,
@@ -29,11 +28,7 @@ const userschema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    followers: {
-      type: Array,
-      default: [],
-    },
-    followings: {
+    friends: {
       type: Array,
       default: [],
     },
@@ -49,6 +44,7 @@ const userschema = new mongoose.Schema(
 // hash password before save user
 userschema.pre("save", async function (next) {
   if (this.isModified("password") || this.isNew) {
+    console.log("123");
     let hashpassword = await bcrypt.hash(this.password, 12);
     this.password = hashpassword;
     next();
