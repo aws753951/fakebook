@@ -28,10 +28,7 @@ const userschema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    friends: {
-      type: Array,
-      default: [],
-    },
+    friends: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
     isAdmin: {
       type: Boolean,
       default: false,

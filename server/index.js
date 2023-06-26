@@ -6,6 +6,8 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const userRoute = require("./routes").user;
 const authRoute = require("./routes").auth;
+const postRoute = require("./routes").post;
+const freeRoute = require("./routes").free;
 const passport = require("passport");
 require("./config/passport")(passport);
 
@@ -29,6 +31,14 @@ app.use(
   userRoute
 );
 app.use("/api/auth", authRoute);
+
+app.use(
+  "/api/post",
+  passport.authenticate("jwt", { session: false }),
+  postRoute
+);
+
+app.use("/api/free", freeRoute);
 
 app.get("/check", (req, res) => {
   return res.send("OK");
