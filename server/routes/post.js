@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
   // req.body.userID 是 post schema，避免產生的_id被錯認為user的id
   if (req.body.userID !== req.user._id.toString()) {
     // 記得幫忙導向*****************
-    return res.status(403).json("請重新登入");
+    return res.status(403).send("請重新登入");
   }
   try {
     // 記得補上joi*****************
