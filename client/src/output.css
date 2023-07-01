@@ -571,29 +571,168 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+#root :is(.sticky) {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+#root :is(.top-0) {
+  top: 0px;
+}
+
 #root :is(.col-span-1) {
   grid-column: span 1 / span 1;
+}
+
+#root :is(.col-span-2) {
+  grid-column: span 2 / span 2;
+}
+
+#root :is(.m-2) {
+  margin: 0.5rem;
+}
+
+#root :is(.mr-5) {
+  margin-right: 1.25rem;
+}
+
+#root :is(.flex) {
+  display: flex;
 }
 
 #root :is(.grid) {
   display: grid;
 }
 
-#root :is(.w-20) {
-  width: 5rem;
+#root :is(.hidden) {
+  display: none;
 }
 
-#root :is(.w-10) {
-  width: 2.5rem;
+#root :is(.h-10) {
+  height: 2.5rem;
+}
+
+#root :is(.h-12) {
+  height: 3rem;
+}
+
+#root :is(.h-16) {
+  height: 4rem;
+}
+
+#root :is(.h-6) {
+  height: 1.5rem;
+}
+
+#root :is(.w-12) {
+  width: 3rem;
+}
+
+#root :is(.w-2\/5) {
+  width: 40%;
+}
+
+#root :is(.w-3\/4) {
+  width: 75%;
+}
+
+#root :is(.w-full) {
+  width: 100%;
+}
+
+#root :is(.w-6) {
+  width: 1.5rem;
+}
+
+#root :is(.cursor-pointer) {
+  cursor: pointer;
 }
 
 #root :is(.grid-cols-3) {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-#root :is(.bg-red-400) {
+#root :is(.grid-cols-4) {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+#root :is(.grid-cols-2) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#root :is(.items-center) {
+  align-items: center;
+}
+
+#root :is(.justify-end) {
+  justify-content: flex-end;
+}
+
+#root :is(.justify-around) {
+  justify-content: space-around;
+}
+
+#root :is(.overflow-hidden) {
+  overflow: hidden;
+}
+
+#root :is(.rounded-full) {
+  border-radius: 9999px;
+}
+
+#root :is(.border-b-2) {
+  border-bottom-width: 2px;
+}
+
+#root :is(.border-none) {
+  border-style: none;
+}
+
+#root :is(.bg-slate-200) {
   --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+#root :is(.object-cover) {
+  object-fit: cover;
+}
+
+#root :is(.p-1) {
+  padding: 0.25rem;
+}
+
+#root :is(.px-2) {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+#root :is(.px-1) {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+#root :is(.px-4) {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#root :is(.pl-1) {
+  padding-left: 0.25rem;
+}
+
+#root :is(.text-3xl) {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+#root :is(.text-5xl) {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+#root :is(.text-base) {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 #root :is(.text-xl) {
@@ -601,12 +740,110 @@ video {
   line-height: 1.75rem;
 }
 
-#root :is(.text-6xl) {
-  font-size: 3.75rem;
-  line-height: 1;
+#root :is(.text-sky-700) {
+  --tw-text-opacity: 1;
+  color: rgb(3 105 161 / var(--tw-text-opacity));
 }
 
-#root :is(.text-yellow-800) {
+#root :is(.shadow-sm) {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+#root :is(.outline-none) {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.topIcon {
+  margin: 0.125rem;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.topIcon:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+.alertBadge {
+  position: absolute;
+  top: 0.125rem;
+  left: 1.25rem;
+  display: flex;
+  height: 0.75rem;
+  width: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+  font-size: 0.75rem;
+  line-height: 1rem;
   --tw-text-opacity: 1;
-  color: rgb(133 77 14 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.rightTopIcon {
+  position: relative;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.rightTopIcon:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  #root :is(.md\:flex) {
+    display: flex;
+  }
+
+  #root :is(.md\:hidden) {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  #root :is(.lg\:col-span-1) {
+    grid-column: span 1 / span 1;
+  }
+
+  #root :is(.lg\:flex) {
+    display: flex;
+  }
+
+  #root :is(.lg\:hidden) {
+    display: none;
+  }
+
+  #root :is(.lg\:grid-cols-3) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
