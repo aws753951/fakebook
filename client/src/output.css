@@ -571,13 +571,37 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+#root :is(.absolute) {
+  position: absolute;
+}
+
+#root :is(.relative) {
+  position: relative;
+}
+
 #root :is(.sticky) {
   position: -webkit-sticky;
   position: sticky;
 }
 
+#root :is(.bottom-0) {
+  bottom: 0px;
+}
+
+#root :is(.bottom-0\.5) {
+  bottom: 0.125rem;
+}
+
+#root :is(.left-8) {
+  left: 2rem;
+}
+
 #root :is(.top-0) {
   top: 0px;
+}
+
+#root :is(.z-10) {
+  z-index: 10;
 }
 
 #root :is(.col-span-1) {
@@ -592,8 +616,24 @@ video {
   margin: 0.5rem;
 }
 
+#root :is(.ml-2) {
+  margin-left: 0.5rem;
+}
+
+#root :is(.mr-1) {
+  margin-right: 0.25rem;
+}
+
 #root :is(.mr-5) {
   margin-right: 1.25rem;
+}
+
+#root :is(.mt-1) {
+  margin-top: 0.25rem;
+}
+
+#root :is(.mt-2) {
+  margin-top: 0.5rem;
 }
 
 #root :is(.flex) {
@@ -620,40 +660,92 @@ video {
   height: 4rem;
 }
 
+#root :is(.h-2) {
+  height: 0.5rem;
+}
+
+#root :is(.h-3) {
+  height: 0.75rem;
+}
+
+#root :is(.h-4) {
+  height: 1rem;
+}
+
 #root :is(.h-6) {
   height: 1.5rem;
+}
+
+#root :is(.h-7) {
+  height: 1.75rem;
+}
+
+#root :is(.min-h-screen) {
+  min-height: 100vh;
+}
+
+#root :is(.w-1\/2) {
+  width: 50%;
+}
+
+#root :is(.w-10) {
+  width: 2.5rem;
+}
+
+#root :is(.w-11\/12) {
+  width: 91.666667%;
 }
 
 #root :is(.w-12) {
   width: 3rem;
 }
 
+#root :is(.w-2) {
+  width: 0.5rem;
+}
+
 #root :is(.w-2\/5) {
   width: 40%;
+}
+
+#root :is(.w-3) {
+  width: 0.75rem;
 }
 
 #root :is(.w-3\/4) {
   width: 75%;
 }
 
-#root :is(.w-full) {
-  width: 100%;
+#root :is(.w-4) {
+  width: 1rem;
+}
+
+#root :is(.w-5\/6) {
+  width: 83.333333%;
 }
 
 #root :is(.w-6) {
   width: 1.5rem;
 }
 
+#root :is(.w-7) {
+  width: 1.75rem;
+}
+
+#root :is(.w-full) {
+  width: 100%;
+}
+
 #root :is(.cursor-pointer) {
   cursor: pointer;
 }
 
-#root :is(.grid-cols-3) {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+#root :is(.resize-none) {
+  resize: none;
 }
 
-#root :is(.grid-cols-4) {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+#root :is(.grid-cols-1) {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 #root :is(.grid-cols-2) {
@@ -668,6 +760,14 @@ video {
   justify-content: flex-end;
 }
 
+#root :is(.justify-center) {
+  justify-content: center;
+}
+
+#root :is(.justify-between) {
+  justify-content: space-between;
+}
+
 #root :is(.justify-around) {
   justify-content: space-around;
 }
@@ -680,6 +780,18 @@ video {
   border-radius: 9999px;
 }
 
+#root :is(.rounded-lg) {
+  border-radius: 0.5rem;
+}
+
+#root :is(.rounded-xl) {
+  border-radius: 0.75rem;
+}
+
+#root :is(.rounded-md) {
+  border-radius: 0.375rem;
+}
+
 #root :is(.border-b-2) {
   border-bottom-width: 2px;
 }
@@ -688,9 +800,29 @@ video {
   border-style: none;
 }
 
+#root :is(.bg-gray-100) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+#root :is(.bg-gray-300) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+#root :is(.bg-red-500) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
 #root :is(.bg-slate-200) {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+#root :is(.bg-white) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 #root :is(.object-cover) {
@@ -701,19 +833,57 @@ video {
   padding: 0.25rem;
 }
 
-#root :is(.px-2) {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+#root :is(.p-2) {
+  padding: 0.5rem;
 }
 
-#root :is(.px-1) {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+#root :is(.p-3) {
+  padding: 0.75rem;
+}
+
+#root :is(.px-10) {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 #root :is(.px-4) {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+#root :is(.px-12) {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#root :is(.px-14) {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+#root :is(.px-7) {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+#root :is(.px-\[30\%\]) {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+#root :is(.px-\[10\%\]) {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#root :is(.px-\[9\%\]) {
+  padding-left: 9%;
+  padding-right: 9%;
+}
+
+#root :is(.px-\[8\%\]) {
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 #root :is(.pl-1) {
@@ -735,14 +905,42 @@ video {
   line-height: 1.5rem;
 }
 
-#root :is(.text-xl) {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+#root :is(.text-xs) {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+#root :is(.font-bold) {
+  font-weight: 700;
+}
+
+#root :is(.text-blue-500) {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+#root :is(.text-green-600) {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
 #root :is(.text-sky-700) {
   --tw-text-opacity: 1;
   color: rgb(3 105 161 / var(--tw-text-opacity));
+}
+
+#root :is(.opacity-40) {
+  opacity: 0.4;
+}
+
+#root :is(.opacity-60) {
+  opacity: 0.6;
+}
+
+#root :is(.shadow-md) {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 #root :is(.shadow-sm) {
@@ -754,6 +952,22 @@ video {
 #root :is(.outline-none) {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+#root :is(.transition) {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+#root :is(.duration-300) {
+  transition-duration: 300ms;
+}
+
+#root :is(.ease-out) {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .topIcon {
@@ -820,30 +1034,43 @@ video {
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
-@media (min-width: 768px) {
-  #root :is(.md\:flex) {
-    display: flex;
+#root :is(.hover\:bg-gray-200:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+#root :is(.hover\:bg-gray-300:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 640px) {
+  #root :is(.sm\:block) {
+    display: block;
   }
 
-  #root :is(.md\:hidden) {
+  #root :is(.sm\:hidden) {
     display: none;
+  }
+
+  #root :is(.sm\:grid-cols-3) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  #root :is(.md\:px-9) {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  #root :is(.lg\:col-span-1) {
-    grid-column: span 1 / span 1;
+  #root :is(.lg\:block) {
+    display: block;
   }
 
-  #root :is(.lg\:flex) {
-    display: flex;
-  }
-
-  #root :is(.lg\:hidden) {
-    display: none;
-  }
-
-  #root :is(.lg\:grid-cols-3) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  #root :is(.lg\:grid-cols-4) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
